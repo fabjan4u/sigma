@@ -26,14 +26,12 @@ detection:
             - 'Enable-WindowsOptionalFeature'
             - 'SMB1Protocol'
     selection_dism:
-        Image|endswith:
-            - '\dism.exe'
+        Image|endswith: '\dism.exe'
         CommandLine|contains|all:
             - '/enable-feature'
             - 'SMB1Protocol'
     selection_sc_driver:
-        Image|endswith:
-            - '\sc.exe'
+        Image|endswith: '\sc.exe'
         CommandLine|contains|all:
             - 'config'
             - 'mrxsmb10'
